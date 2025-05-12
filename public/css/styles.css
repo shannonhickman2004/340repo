@@ -2,7 +2,7 @@
   --primary-fg: black;
   --primary-bg: white;
   --secondary-fg: white;
-  --secondary-bg: turquoise;
+  --secondary-bg: #007a7a;
   --pop: black;
   --decorative-font: "Segoe UI", sans-serif;
   --body-font: "Helvetica", sans-serif;
@@ -132,14 +132,13 @@ main {
   right: clamp(50%, 52%, 60%);
   transform: translateX(-100%) translateY(-50%);
   top: 50%;
-  background-color: rgba(0, 77, 77, 0.85); 
-  color: #ffffff; 
+  background-color: var(--secondary-bg); 
   backdrop-filter: blur(3px);
+  color: #ffffff; 
   padding: 1.5rem 2rem;
   line-height: 1.6;
   max-width: clamp(300px, 50vw, 600px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
 }
 
 .button-blue {
