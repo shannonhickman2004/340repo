@@ -132,13 +132,14 @@ main {
   right: clamp(50%, 52%, 60%);
   transform: translateX(-100%) translateY(-50%);
   top: 50%;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 77, 77, 0.85); 
+  color: #ffffff; 
   backdrop-filter: blur(3px);
-  color: turquoise;
   padding: 1.5rem 2rem;
   line-height: 1.6;
   max-width: clamp(300px, 50vw, 600px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 .button-blue {
