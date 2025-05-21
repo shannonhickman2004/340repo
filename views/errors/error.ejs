@@ -1,0 +1,12 @@
+<% // === Error Page Title === %>
+<% if (title) { %>
+  <h1><%= title %></h1>
+<% } else {
+  res.redirect('/')
+} %>
+
+<% // === Error Message Block (HTML-safe) === %>
+<%- message %>
+
+<% // === Message humor === %>
+<p>Something went wrong... but at least it's not a Monday ☕</p>
