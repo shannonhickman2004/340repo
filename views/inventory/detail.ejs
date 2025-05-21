@@ -1,0 +1,35 @@
+<% // === Vehicle Detail Page === %>
+
+<% if (title) { %>
+  <h1 class="vehicle-title"><%= title %></h1>
+<% } else { res.redirect('/') } %>
+
+<div class="vehicle-detail-container">
+  <div class="vehicle-image">
+    <img src="<%= vehicle.inv_image %>" alt="Image of <%= vehicle.inv_make %> <%= vehicle.inv_model %>">
+  </div>
+
+  <div class="vehicle-specs">
+<ul>
+  <li><strong>Price:</strong> $<%= vehicle.inv_price.toLocaleString() %></li>
+  <li><strong>Mileage:</strong> <%= vehicle.inv_miles.toLocaleString() %></li>
+  <li><strong>MPG:</strong> 29/37 (City/Highway)</li> <!-- You can hard-code this or add to DB -->
+  <li><strong>Ext. Color:</strong> <%= vehicle.inv_color %></li>
+  <li><strong>Int. Color:</strong> Black</li> <!-- Optional field -->
+  <li><strong>Fuel Type:</strong> Gasoline</li> <!-- Optional field -->
+  <li><strong>Drivetrain:</strong> Front Wheel Drive</li> <!-- Optional field -->
+  <li><strong>Transmission:</strong> Xtronic CVT</li> <!-- Optional field -->
+  <li><strong>Stock #:</strong> 8DLCBQ</li> <!-- Optional field -->
+  <li><strong>VIN:</strong> <%= vehicle.inv_vin %></li>
+</ul>
+
+    <div class="detail-buttons">
+      <button class="button-blue">Start My Purchase</button>
+      <button class="button-blue">Schedule Test Drive</button>
+      <button class="button-blue">Apply for Financing</button>
+    </div>
+    <div class="vehicle-contact">
+        <p><strong>Call Us:</strong> <a href="tel:8013967886">801-396-7886</a></p>
+    </div>
+  </div>
+</div>

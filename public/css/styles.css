@@ -275,6 +275,57 @@ footer {
   text-decoration: underline;
 }
 
+.vehicle-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--decorative-font);
+}
+
+.vehicle-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.vehicle-specs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.vehicle-specs li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-buttons .button-blue {
+  width: 100%;
+  max-width: 300px;
+  align-self: center;
+}
+
 @media screen and (min-width: 768px) {
   .content {
     flex-direction: row; 
@@ -293,5 +344,28 @@ footer {
 
   .gallery {
     grid-template-columns: 1fr 1fr; 
+  }
+
+    .vehicle-detail-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .vehicle-specs {
+    max-width: 400px;
+    padding-left: 2rem;
+  }
+
+  .detail-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .detail-buttons .button-blue {
+    width: auto;
+    flex: 1 1 auto;
   }
 }
