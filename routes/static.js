@@ -1,14 +1,19 @@
-const express = require('express');
-const router = express.Router();
+const express = require("express")
+const router = express.Router()
+const baseController = require("../controllers/baseController")
 
-// Static Routes
-// Set up "public" folder / subfolders for static files
-router.use(express.static("public"));
-router.use("/css", express.static(__dirname + "public/css"));
-router.use("/js", express.static(__dirname + "public/js"));
-router.use("/images", express.static(__dirname + "public/images"));
+// Static folder
+router.use(express.static("public"))
+router.use("/css", express.static(__dirname + "/public/css"))
+router.use("/js", express.static(__dirname + "/public/js"))
+router.use("/images", express.static(__dirname + "/public/images"))
 
-module.exports = router;
+// Homepage route
+router.get("/", baseController.buildHome)
 
+// Task 3: Intentional error test
+router.get("/error-test", baseController.triggerError)
+
+module.exports = router
 
 
