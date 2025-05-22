@@ -59,6 +59,7 @@ header {
   color: var(--primary-fg); 
   text-decoration: none;
   font-family: var(--decorative-font);
+  font-size: 2rem;
   
 }
 
